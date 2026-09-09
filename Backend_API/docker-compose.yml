@@ -1,0 +1,24 @@
+version: "3"
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.env
+    environment:
+      # Khi chạy qua Docker, 2 dòng này sẽ đè lên cấu hình localhost trong file .env
+      - DATABASE_HOSTNAME=postgres 
+      - DATABASE_PORT=5432
+  postgres:
+    image: "postgres:15-alpine"
+    ports:
+      - "2618:5432"
+    environment:
+      - POSTGRES_PASSWORD=261267
+      - POSTGRES_DB=fastapi
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+
+volumes:
+  postgres-db:
