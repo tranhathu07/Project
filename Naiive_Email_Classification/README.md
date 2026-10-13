@@ -19,4 +19,4 @@ Dự án này ứng dụng thuật toán học máy cơ bản để giải quy�
 ## Cấu trúc thư mục
 * `Naiive_Email_Classification.ipynb`: Mã nguồn chính (Notebook) chứa toàn bộ quá trình đọc dữ liệu, tiền xử lý, huấn luyện và đánh giá mô hình.
 * `README.md`: Tài liệu mô tả dự án.
-* `Dataset.zip`: Dataset được sử dụng
+* `email.zip`: Dataset được sử dụng
